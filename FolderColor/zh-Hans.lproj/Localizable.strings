@@ -1,0 +1,10 @@
+/*
+	Localizable.strings
+	FolderColor
+
+	Created by 黄宝成 on 2022/5/10.
+	
+*/
+
+content = "拖动文件夹到此来切换文件夹图标";
+revertContent = "拖动文件夹到此来还原文件夹图标";

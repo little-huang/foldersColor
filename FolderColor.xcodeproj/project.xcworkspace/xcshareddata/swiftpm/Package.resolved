@@ -1,0 +1,14 @@
+{
+  "pins" : [
+    {
+      "identity" : "swiftuiflux",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/Dimillian/SwiftUIFlux",
+      "state" : {
+        "branch" : "master",
+        "revision" : "39b885558fdee277f7ca2a8c81900123e9bc436f"
+      }
+    }
+  ],
+  "version" : 2
+}

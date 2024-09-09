@@ -1,0 +1,10 @@
+/*
+	Localizable.strings
+	FolderColor
+
+	Created by 黄宝成 on 2022/5/10.
+	
+*/
+
+content = "Drag folders here to toggle folder icons";
+revertContent = "Drag folders here to restore the folder icon";

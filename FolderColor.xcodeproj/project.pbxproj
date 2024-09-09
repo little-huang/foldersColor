@@ -3,71 +3,108 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2FEF556B228DCC3700832118 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF556A228DCC3700832118 /* AppDelegate.swift */; };
-		2FEF556D228DCC3700832118 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF556C228DCC3700832118 /* ViewController.swift */; };
-		2FEF556F228DCC3700832118 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF556E228DCC3700832118 /* Document.swift */; };
-		2FEF5572228DCC3700832118 /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF5570228DCC3700832118 /* Document.xcdatamodeld */; };
-		2FEF5574228DCC3800832118 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2FEF5573228DCC3800832118 /* Assets.xcassets */; };
-		2FEF5577228DCC3800832118 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2FEF5575228DCC3800832118 /* Main.storyboard */; };
-		2FEF5583228DCC3800832118 /* FolderColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF5582228DCC3800832118 /* FolderColorTests.swift */; };
-		2FEF558E228DCC3800832118 /* FolderColorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FEF558D228DCC3800832118 /* FolderColorUITests.swift */; };
+		0512F4512827CA710045D7B7 /* SwiftUIFlux in Frameworks */ = {isa = PBXBuildFile; productRef = 0512F4502827CA710045D7B7 /* SwiftUIFlux */; };
+		0512F4552827CAC30045D7B7 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512F4542827CAC30045D7B7 /* AppState.swift */; };
+		0512F4572827CAE10045D7B7 /* ColorState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512F4562827CAE10045D7B7 /* ColorState.swift */; };
+		0512F45A2827CB190045D7B7 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512F4592827CB190045D7B7 /* Color.swift */; };
+		0512F45D2827CC820045D7B7 /* AppReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512F45C2827CC820045D7B7 /* AppReducer.swift */; };
+		0512F45F2827CC9A0045D7B7 /* ColorReducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512F45E2827CC9A0045D7B7 /* ColorReducer.swift */; };
+		0512F4622827CCE20045D7B7 /* ColorActions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512F4612827CCE20045D7B7 /* ColorActions.swift */; };
+		0512F4642827CD560045D7B7 /* sampleStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512F4632827CD560045D7B7 /* sampleStore.swift */; };
+		0512F4682827D0250045D7B7 /* ColorsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512F4672827D0250045D7B7 /* ColorsListView.swift */; };
+		0512F46B2827D3620045D7B7 /* ColorListUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512F46A2827D3620045D7B7 /* ColorListUtil.swift */; };
+		0512F46D2827D5440045D7B7 /* TypeUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0512F46C2827D5440045D7B7 /* TypeUtil.swift */; };
+		0543608C282ABC4C00172996 /* ExtensionColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0543608B282ABC4C00172996 /* ExtensionColor.swift */; };
+		0543608E282ACA3600172996 /* SVGView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0543608D282ACA3600172996 /* SVGView.swift */; };
+		05A8472B282670D6007ECBC2 /* ColorListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05A8472A282670D6007ECBC2 /* ColorListItemView.swift */; };
+		05ADEA82282D0B9400E5758E /* FolderIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ADEA81282D0B9400E5758E /* FolderIconView.swift */; };
+		05ADEA84282D4EEC00E5758E /* ExtensionImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05ADEA83282D4EEC00E5758E /* ExtensionImage.swift */; };
+		05B807A1282BFE8800D642DA /* ExtensionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B807A0282BFE8800D642DA /* ExtensionView.swift */; };
+		05D1C58A2896830700B69318 /* IconModalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05D1C5892896830700B69318 /* IconModalView.swift */; };
+		05EC10142823DCF300982154 /* FolderColorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC10132823DCF300982154 /* FolderColorApp.swift */; };
+		05EC10162823DCF300982154 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC10152823DCF300982154 /* ContentView.swift */; };
+		05EC10182823DCF400982154 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05EC10172823DCF400982154 /* Assets.xcassets */; };
+		05EC101B2823DCF400982154 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 05EC101A2823DCF400982154 /* Preview Assets.xcassets */; };
+		05EC10262823DCF400982154 /* FolderColorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC10252823DCF400982154 /* FolderColorTests.swift */; };
+		05EC10302823DCF400982154 /* FolderColorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC102F2823DCF400982154 /* FolderColorUITests.swift */; };
+		05EC10322823DCF400982154 /* FolderColorUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05EC10312823DCF400982154 /* FolderColorUITestsLaunchTests.swift */; };
+		05FEA6E62C8EDBE5006313C5 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 05FEA6E82C8EDBE5006313C5 /* Localizable.strings */; };
+		5A7ACF16C7D6831925AB1936 /* LaunchManagerUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7ACEB1FCC7B103475CF39A /* LaunchManagerUtil.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		2FEF557F228DCC3800832118 /* PBXContainerItemProxy */ = {
+		05EC10222823DCF400982154 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2FEF555F228DCC3700832118 /* Project object */;
+			containerPortal = 05EC10082823DCF300982154 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2FEF5566228DCC3700832118;
+			remoteGlobalIDString = 05EC100F2823DCF300982154;
 			remoteInfo = FolderColor;
 		};
-		2FEF558A228DCC3800832118 /* PBXContainerItemProxy */ = {
+		05EC102C2823DCF400982154 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 2FEF555F228DCC3700832118 /* Project object */;
+			containerPortal = 05EC10082823DCF300982154 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2FEF5566228DCC3700832118;
+			remoteGlobalIDString = 05EC100F2823DCF300982154;
 			remoteInfo = FolderColor;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		2FEF5567228DCC3700832118 /* FolderColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolderColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FEF556A228DCC3700832118 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2FEF556C228DCC3700832118 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		2FEF556E228DCC3700832118 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
-		2FEF5571228DCC3700832118 /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
-		2FEF5573228DCC3800832118 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		2FEF5576228DCC3800832118 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		2FEF5578228DCC3800832118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2FEF5579228DCC3800832118 /* FolderColor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FolderColor.entitlements; sourceTree = "<group>"; };
-		2FEF557E228DCC3800832118 /* FolderColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolderColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FEF5582228DCC3800832118 /* FolderColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderColorTests.swift; sourceTree = "<group>"; };
-		2FEF5584228DCC3800832118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		2FEF5589228DCC3800832118 /* FolderColorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolderColorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2FEF558D228DCC3800832118 /* FolderColorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderColorUITests.swift; sourceTree = "<group>"; };
-		2FEF558F228DCC3800832118 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0512F4542827CAC30045D7B7 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		0512F4562827CAE10045D7B7 /* ColorState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorState.swift; sourceTree = "<group>"; };
+		0512F4592827CB190045D7B7 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		0512F45C2827CC820045D7B7 /* AppReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppReducer.swift; sourceTree = "<group>"; };
+		0512F45E2827CC9A0045D7B7 /* ColorReducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorReducer.swift; sourceTree = "<group>"; };
+		0512F4612827CCE20045D7B7 /* ColorActions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorActions.swift; sourceTree = "<group>"; };
+		0512F4632827CD560045D7B7 /* sampleStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sampleStore.swift; sourceTree = "<group>"; };
+		0512F4672827D0250045D7B7 /* ColorsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorsListView.swift; sourceTree = "<group>"; };
+		0512F46A2827D3620045D7B7 /* ColorListUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListUtil.swift; sourceTree = "<group>"; };
+		0512F46C2827D5440045D7B7 /* TypeUtil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeUtil.swift; sourceTree = "<group>"; };
+		0543608B282ABC4C00172996 /* ExtensionColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionColor.swift; sourceTree = "<group>"; };
+		0543608D282ACA3600172996 /* SVGView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SVGView.swift; sourceTree = "<group>"; };
+		05A8472A282670D6007ECBC2 /* ColorListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorListItemView.swift; sourceTree = "<group>"; };
+		05ADEA81282D0B9400E5758E /* FolderIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderIconView.swift; sourceTree = "<group>"; };
+		05ADEA83282D4EEC00E5758E /* ExtensionImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionImage.swift; sourceTree = "<group>"; };
+		05B807A0282BFE8800D642DA /* ExtensionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionView.swift; sourceTree = "<group>"; };
+		05D1C5892896830700B69318 /* IconModalView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconModalView.swift; sourceTree = "<group>"; };
+		05EC10102823DCF300982154 /* FolderColor.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FolderColor.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EC10132823DCF300982154 /* FolderColorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderColorApp.swift; sourceTree = "<group>"; };
+		05EC10152823DCF300982154 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		05EC10172823DCF400982154 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		05EC101A2823DCF400982154 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		05EC101C2823DCF400982154 /* FolderColor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FolderColor.entitlements; sourceTree = "<group>"; };
+		05EC10212823DCF400982154 /* FolderColorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolderColorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EC10252823DCF400982154 /* FolderColorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderColorTests.swift; sourceTree = "<group>"; };
+		05EC102B2823DCF400982154 /* FolderColorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FolderColorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		05EC102F2823DCF400982154 /* FolderColorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderColorUITests.swift; sourceTree = "<group>"; };
+		05EC10312823DCF400982154 /* FolderColorUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderColorUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		05FEA6E72C8EDBE5006313C5 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
+		05FEA6E92C8EDBE9006313C5 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		05FEA6EA2C8EDBEA006313C5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		5A7ACEB1FCC7B103475CF39A /* LaunchManagerUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LaunchManagerUtil.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		2FEF5564228DCC3700832118 /* Frameworks */ = {
+		05EC100D2823DCF300982154 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0512F4512827CA710045D7B7 /* SwiftUIFlux in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		05EC101E2823DCF400982154 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FEF557B228DCC3800832118 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2FEF5586228DCC3800832118 /* Frameworks */ = {
+		05EC10282823DCF400982154 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -77,208 +114,280 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		2FEF555E228DCC3700832118 = {
+		0512F4522827CAA10045D7B7 /* Flux */ = {
 			isa = PBXGroup;
 			children = (
-				2FEF5569228DCC3700832118 /* FolderColor */,
-				2FEF5581228DCC3800832118 /* FolderColorTests */,
-				2FEF558C228DCC3800832118 /* FolderColorUITests */,
-				2FEF5568228DCC3700832118 /* Products */,
+				0512F4602827CCD30045D7B7 /* actions */,
+				0512F45B2827CC710045D7B7 /* reducers */,
+				0512F4582827CB000045D7B7 /* models */,
+				0512F4532827CAB10045D7B7 /* state */,
+				0512F4632827CD560045D7B7 /* sampleStore.swift */,
 			);
+			name = Flux;
 			sourceTree = "<group>";
 		};
-		2FEF5568228DCC3700832118 /* Products */ = {
+		0512F4532827CAB10045D7B7 /* state */ = {
 			isa = PBXGroup;
 			children = (
-				2FEF5567228DCC3700832118 /* FolderColor.app */,
-				2FEF557E228DCC3800832118 /* FolderColorTests.xctest */,
-				2FEF5589228DCC3800832118 /* FolderColorUITests.xctest */,
+				0512F4542827CAC30045D7B7 /* AppState.swift */,
+				0512F4562827CAE10045D7B7 /* ColorState.swift */,
 			);
-			name = Products;
+			name = state;
 			sourceTree = "<group>";
 		};
-		2FEF5569228DCC3700832118 /* FolderColor */ = {
+		0512F4582827CB000045D7B7 /* models */ = {
 			isa = PBXGroup;
 			children = (
-				2FEF559B228DCCA400832118 /* Main */,
-				2FEF556A228DCC3700832118 /* AppDelegate.swift */,
-				2FEF556C228DCC3700832118 /* ViewController.swift */,
-				2FEF556E228DCC3700832118 /* Document.swift */,
-				2FEF5573228DCC3800832118 /* Assets.xcassets */,
-				2FEF5575228DCC3800832118 /* Main.storyboard */,
-				2FEF5578228DCC3800832118 /* Info.plist */,
-				2FEF5579228DCC3800832118 /* FolderColor.entitlements */,
-				2FEF5570228DCC3700832118 /* Document.xcdatamodeld */,
+				0512F4592827CB190045D7B7 /* Color.swift */,
 			);
-			path = FolderColor;
+			path = models;
 			sourceTree = "<group>";
 		};
-		2FEF5581228DCC3800832118 /* FolderColorTests */ = {
+		0512F45B2827CC710045D7B7 /* reducers */ = {
 			isa = PBXGroup;
 			children = (
-				2FEF5582228DCC3800832118 /* FolderColorTests.swift */,
-				2FEF5584228DCC3800832118 /* Info.plist */,
+				0512F45C2827CC820045D7B7 /* AppReducer.swift */,
+				0512F45E2827CC9A0045D7B7 /* ColorReducer.swift */,
 			);
-			path = FolderColorTests;
+			name = reducers;
 			sourceTree = "<group>";
 		};
-		2FEF558C228DCC3800832118 /* FolderColorUITests */ = {
+		0512F4602827CCD30045D7B7 /* actions */ = {
 			isa = PBXGroup;
 			children = (
-				2FEF558D228DCC3800832118 /* FolderColorUITests.swift */,
-				2FEF558F228DCC3800832118 /* Info.plist */,
+				0512F4612827CCE20045D7B7 /* ColorActions.swift */,
 			);
-			path = FolderColorUITests;
+			path = actions;
 			sourceTree = "<group>";
 		};
-		2FEF559B228DCCA400832118 /* Main */ = {
+		0512F4652827CE4A0045D7B7 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				2FEF559E228DCCBA00832118 /* Modal */,
-				2FEF559D228DCCB600832118 /* View */,
-				2FEF559C228DCCAE00832118 /* Controller */,
+				0512F4662827CE530045D7B7 /* extension */,
 			);
-			name = Main;
+			path = Shared;
 			sourceTree = "<group>";
 		};
-		2FEF559C228DCCAE00832118 /* Controller */ = {
+		0512F4662827CE530045D7B7 /* extension */ = {
 			isa = PBXGroup;
 			children = (
+				0543608B282ABC4C00172996 /* ExtensionColor.swift */,
+				05B807A0282BFE8800D642DA /* ExtensionView.swift */,
+				05ADEA83282D4EEC00E5758E /* ExtensionImage.swift */,
 			);
-			path = Controller;
+			name = extension;
 			sourceTree = "<group>";
 		};
-		2FEF559D228DCCB600832118 /* View */ = {
+		0512F4692827D3550045D7B7 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				0512F46A2827D3620045D7B7 /* ColorListUtil.swift */,
+				0512F46C2827D5440045D7B7 /* TypeUtil.swift */,
+				5A7ACEB1FCC7B103475CF39A /* LaunchManagerUtil.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		05D274A728265B3E0092517B /* View */ = {
+			isa = PBXGroup;
+			children = (
+				05A8472A282670D6007ECBC2 /* ColorListItemView.swift */,
+				0512F4672827D0250045D7B7 /* ColorsListView.swift */,
+				0543608D282ACA3600172996 /* SVGView.swift */,
+				05ADEA81282D0B9400E5758E /* FolderIconView.swift */,
+				05D1C5892896830700B69318 /* IconModalView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
 		};
-		2FEF559E228DCCBA00832118 /* Modal */ = {
+		05EC10072823DCF300982154 = {
 			isa = PBXGroup;
 			children = (
+				05EC10122823DCF300982154 /* FolderColor */,
+				05EC10242823DCF400982154 /* FolderColorTests */,
+				05EC102E2823DCF400982154 /* FolderColorUITests */,
+				05EC10112823DCF300982154 /* Products */,
 			);
-			name = Modal;
+			sourceTree = "<group>";
+		};
+		05EC10112823DCF300982154 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				05EC10102823DCF300982154 /* FolderColor.app */,
+				05EC10212823DCF400982154 /* FolderColorTests.xctest */,
+				05EC102B2823DCF400982154 /* FolderColorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		05EC10122823DCF300982154 /* FolderColor */ = {
+			isa = PBXGroup;
+			children = (
+				0512F4692827D3550045D7B7 /* Util */,
+				0512F4652827CE4A0045D7B7 /* Shared */,
+				0512F4522827CAA10045D7B7 /* Flux */,
+				05D274A728265B3E0092517B /* View */,
+				05EC10132823DCF300982154 /* FolderColorApp.swift */,
+				05EC10152823DCF300982154 /* ContentView.swift */,
+				05EC10172823DCF400982154 /* Assets.xcassets */,
+				05EC101C2823DCF400982154 /* FolderColor.entitlements */,
+				05EC10192823DCF400982154 /* Preview Content */,
+				05FEA6E82C8EDBE5006313C5 /* Localizable.strings */,
+			);
+			path = FolderColor;
+			sourceTree = "<group>";
+		};
+		05EC10192823DCF400982154 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				05EC101A2823DCF400982154 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		05EC10242823DCF400982154 /* FolderColorTests */ = {
+			isa = PBXGroup;
+			children = (
+				05EC10252823DCF400982154 /* FolderColorTests.swift */,
+			);
+			path = FolderColorTests;
+			sourceTree = "<group>";
+		};
+		05EC102E2823DCF400982154 /* FolderColorUITests */ = {
+			isa = PBXGroup;
+			children = (
+				05EC102F2823DCF400982154 /* FolderColorUITests.swift */,
+				05EC10312823DCF400982154 /* FolderColorUITestsLaunchTests.swift */,
+			);
+			path = FolderColorUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		2FEF5566228DCC3700832118 /* FolderColor */ = {
+		05EC100F2823DCF300982154 /* FolderColor */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FEF5592228DCC3800832118 /* Build configuration list for PBXNativeTarget "FolderColor" */;
+			buildConfigurationList = 05EC10352823DCF400982154 /* Build configuration list for PBXNativeTarget "FolderColor" */;
 			buildPhases = (
-				2FEF5563228DCC3700832118 /* Sources */,
-				2FEF5564228DCC3700832118 /* Frameworks */,
-				2FEF5565228DCC3700832118 /* Resources */,
+				05EC100C2823DCF300982154 /* Sources */,
+				05EC100D2823DCF300982154 /* Frameworks */,
+				05EC100E2823DCF300982154 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = FolderColor;
+			packageProductDependencies = (
+				0512F4502827CA710045D7B7 /* SwiftUIFlux */,
+			);
 			productName = FolderColor;
-			productReference = 2FEF5567228DCC3700832118 /* FolderColor.app */;
+			productReference = 05EC10102823DCF300982154 /* FolderColor.app */;
 			productType = "com.apple.product-type.application";
 		};
-		2FEF557D228DCC3800832118 /* FolderColorTests */ = {
+		05EC10202823DCF400982154 /* FolderColorTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FEF5595228DCC3800832118 /* Build configuration list for PBXNativeTarget "FolderColorTests" */;
+			buildConfigurationList = 05EC10382823DCF400982154 /* Build configuration list for PBXNativeTarget "FolderColorTests" */;
 			buildPhases = (
-				2FEF557A228DCC3800832118 /* Sources */,
-				2FEF557B228DCC3800832118 /* Frameworks */,
-				2FEF557C228DCC3800832118 /* Resources */,
+				05EC101D2823DCF400982154 /* Sources */,
+				05EC101E2823DCF400982154 /* Frameworks */,
+				05EC101F2823DCF400982154 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2FEF5580228DCC3800832118 /* PBXTargetDependency */,
+				05EC10232823DCF400982154 /* PBXTargetDependency */,
 			);
 			name = FolderColorTests;
 			productName = FolderColorTests;
-			productReference = 2FEF557E228DCC3800832118 /* FolderColorTests.xctest */;
+			productReference = 05EC10212823DCF400982154 /* FolderColorTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		2FEF5588228DCC3800832118 /* FolderColorUITests */ = {
+		05EC102A2823DCF400982154 /* FolderColorUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2FEF5598228DCC3800832118 /* Build configuration list for PBXNativeTarget "FolderColorUITests" */;
+			buildConfigurationList = 05EC103B2823DCF400982154 /* Build configuration list for PBXNativeTarget "FolderColorUITests" */;
 			buildPhases = (
-				2FEF5585228DCC3800832118 /* Sources */,
-				2FEF5586228DCC3800832118 /* Frameworks */,
-				2FEF5587228DCC3800832118 /* Resources */,
+				05EC10272823DCF400982154 /* Sources */,
+				05EC10282823DCF400982154 /* Frameworks */,
+				05EC10292823DCF400982154 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				2FEF558B228DCC3800832118 /* PBXTargetDependency */,
+				05EC102D2823DCF400982154 /* PBXTargetDependency */,
 			);
 			name = FolderColorUITests;
 			productName = FolderColorUITests;
-			productReference = 2FEF5589228DCC3800832118 /* FolderColorUITests.xctest */;
+			productReference = 05EC102B2823DCF400982154 /* FolderColorUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		2FEF555F228DCC3700832118 /* Project object */ = {
+		05EC10082823DCF300982154 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1020;
-				LastUpgradeCheck = 1120;
-				ORGANIZATIONNAME = "黄宝成";
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
-					2FEF5566228DCC3700832118 = {
-						CreatedOnToolsVersion = 10.2.1;
+					05EC100F2823DCF300982154 = {
+						CreatedOnToolsVersion = 13.3;
 					};
-					2FEF557D228DCC3800832118 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 2FEF5566228DCC3700832118;
+					05EC10202823DCF400982154 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 05EC100F2823DCF300982154;
 					};
-					2FEF5588228DCC3800832118 = {
-						CreatedOnToolsVersion = 10.2.1;
-						TestTargetID = 2FEF5566228DCC3700832118;
+					05EC102A2823DCF400982154 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 05EC100F2823DCF300982154;
 					};
 				};
 			};
-			buildConfigurationList = 2FEF5562228DCC3700832118 /* Build configuration list for PBXProject "FolderColor" */;
-			compatibilityVersion = "Xcode 9.3";
+			buildConfigurationList = 05EC100B2823DCF300982154 /* Build configuration list for PBXProject "FolderColor" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				ja,
 			);
-			mainGroup = 2FEF555E228DCC3700832118;
-			productRefGroup = 2FEF5568228DCC3700832118 /* Products */;
+			mainGroup = 05EC10072823DCF300982154;
+			packageReferences = (
+				0512F44F2827CA710045D7B7 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */,
+			);
+			productRefGroup = 05EC10112823DCF300982154 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2FEF5566228DCC3700832118 /* FolderColor */,
-				2FEF557D228DCC3800832118 /* FolderColorTests */,
-				2FEF5588228DCC3800832118 /* FolderColorUITests */,
+				05EC100F2823DCF300982154 /* FolderColor */,
+				05EC10202823DCF400982154 /* FolderColorTests */,
+				05EC102A2823DCF400982154 /* FolderColorUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		2FEF5565228DCC3700832118 /* Resources */ = {
+		05EC100E2823DCF300982154 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FEF5574228DCC3800832118 /* Assets.xcassets in Resources */,
-				2FEF5577228DCC3800832118 /* Main.storyboard in Resources */,
+				05EC101B2823DCF400982154 /* Preview Assets.xcassets in Resources */,
+				05FEA6E62C8EDBE5006313C5 /* Localizable.strings in Resources */,
+				05EC10182823DCF400982154 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FEF557C228DCC3800832118 /* Resources */ = {
+		05EC101F2823DCF400982154 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FEF5587228DCC3800832118 /* Resources */ = {
+		05EC10292823DCF400982154 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -288,68 +397,86 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2FEF5563228DCC3700832118 /* Sources */ = {
+		05EC100C2823DCF300982154 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FEF5572228DCC3700832118 /* Document.xcdatamodeld in Sources */,
-				2FEF556D228DCC3700832118 /* ViewController.swift in Sources */,
-				2FEF556B228DCC3700832118 /* AppDelegate.swift in Sources */,
-				2FEF556F228DCC3700832118 /* Document.swift in Sources */,
+				05EC10162823DCF300982154 /* ContentView.swift in Sources */,
+				0512F4552827CAC30045D7B7 /* AppState.swift in Sources */,
+				0512F45A2827CB190045D7B7 /* Color.swift in Sources */,
+				0512F4622827CCE20045D7B7 /* ColorActions.swift in Sources */,
+				05EC10142823DCF300982154 /* FolderColorApp.swift in Sources */,
+				0512F4642827CD560045D7B7 /* sampleStore.swift in Sources */,
+				05D1C58A2896830700B69318 /* IconModalView.swift in Sources */,
+				0543608E282ACA3600172996 /* SVGView.swift in Sources */,
+				0512F46B2827D3620045D7B7 /* ColorListUtil.swift in Sources */,
+				0512F46D2827D5440045D7B7 /* TypeUtil.swift in Sources */,
+				05A8472B282670D6007ECBC2 /* ColorListItemView.swift in Sources */,
+				05B807A1282BFE8800D642DA /* ExtensionView.swift in Sources */,
+				0543608C282ABC4C00172996 /* ExtensionColor.swift in Sources */,
+				0512F4682827D0250045D7B7 /* ColorsListView.swift in Sources */,
+				0512F45D2827CC820045D7B7 /* AppReducer.swift in Sources */,
+				0512F45F2827CC9A0045D7B7 /* ColorReducer.swift in Sources */,
+				0512F4572827CAE10045D7B7 /* ColorState.swift in Sources */,
+				05ADEA82282D0B9400E5758E /* FolderIconView.swift in Sources */,
+				05ADEA84282D4EEC00E5758E /* ExtensionImage.swift in Sources */,
+				5A7ACF16C7D6831925AB1936 /* LaunchManagerUtil.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FEF557A228DCC3800832118 /* Sources */ = {
+		05EC101D2823DCF400982154 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FEF5583228DCC3800832118 /* FolderColorTests.swift in Sources */,
+				05EC10262823DCF400982154 /* FolderColorTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		2FEF5585228DCC3800832118 /* Sources */ = {
+		05EC10272823DCF400982154 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2FEF558E228DCC3800832118 /* FolderColorUITests.swift in Sources */,
+				05EC10322823DCF400982154 /* FolderColorUITestsLaunchTests.swift in Sources */,
+				05EC10302823DCF400982154 /* FolderColorUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		2FEF5580228DCC3800832118 /* PBXTargetDependency */ = {
+		05EC10232823DCF400982154 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2FEF5566228DCC3700832118 /* FolderColor */;
-			targetProxy = 2FEF557F228DCC3800832118 /* PBXContainerItemProxy */;
+			target = 05EC100F2823DCF300982154 /* FolderColor */;
+			targetProxy = 05EC10222823DCF400982154 /* PBXContainerItemProxy */;
 		};
-		2FEF558B228DCC3800832118 /* PBXTargetDependency */ = {
+		05EC102D2823DCF400982154 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 2FEF5566228DCC3700832118 /* FolderColor */;
-			targetProxy = 2FEF558A228DCC3800832118 /* PBXContainerItemProxy */;
+			target = 05EC100F2823DCF300982154 /* FolderColor */;
+			targetProxy = 05EC102C2823DCF400982154 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		2FEF5575228DCC3800832118 /* Main.storyboard */ = {
+		05FEA6E82C8EDBE5006313C5 /* Localizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				2FEF5576228DCC3800832118 /* Base */,
+				05FEA6E72C8EDBE5006313C5 /* ja */,
+				05FEA6E92C8EDBE9006313C5 /* zh-Hans */,
+				05FEA6EA2C8EDBEA006313C5 /* en */,
 			);
-			name = Main.storyboard;
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		2FEF5590228DCC3800832118 /* Debug */ = {
+		05EC10332823DCF400982154 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -368,13 +495,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -393,7 +520,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -403,14 +530,13 @@
 			};
 			name = Debug;
 		};
-		2FEF5591228DCC3800832118 /* Release */ = {
+		05EC10342823DCF400982154 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
 				CLANG_ENABLE_OBJC_WEAK = YES;
@@ -429,13 +555,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "Mac Developer";
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -448,7 +574,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
@@ -457,123 +583,135 @@
 			};
 			name = Release;
 		};
-		2FEF5593228DCC3800832118 /* Debug */ = {
+		05EC10362823DCF400982154 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = FolderColor/FolderColor.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"FolderColor/Preview Content\"";
 				DEVELOPMENT_TEAM = NPX5YQ2XE8;
-				INFOPLIST_FILE = FolderColor/Info.plist;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hbc-project.FolderColor";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = me.huangbaocheng.FolderColor.FolderColor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
-		2FEF5594228DCC3800832118 /* Release */ = {
+		05EC10372823DCF400982154 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_ENTITLEMENTS = FolderColor/FolderColor.entitlements;
-				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 3;
+				DEVELOPMENT_ASSET_PATHS = "\"FolderColor/Preview Content\"";
 				DEVELOPMENT_TEAM = NPX5YQ2XE8;
-				INFOPLIST_FILE = FolderColor/Info.plist;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hbc-project.FolderColor";
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 1.0.2;
+				PRODUCT_BUNDLE_IDENTIFIER = me.huangbaocheng.FolderColor.FolderColor;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
-		2FEF5596228DCC3800832118 /* Debug */ = {
+		05EC10392823DCF400982154 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NPX5YQ2XE8;
-				INFOPLIST_FILE = FolderColorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hbc-project.FolderColorTests";
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.huangbaocheng.FolderColor.FolderColorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FolderColor.app/Contents/MacOS/FolderColor";
 			};
 			name = Debug;
 		};
-		2FEF5597228DCC3800832118 /* Release */ = {
+		05EC103A2823DCF400982154 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NPX5YQ2XE8;
-				INFOPLIST_FILE = FolderColorTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hbc-project.FolderColorTests";
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 12.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.huangbaocheng.FolderColor.FolderColorTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FolderColor.app/Contents/MacOS/FolderColor";
 			};
 			name = Release;
 		};
-		2FEF5599228DCC3800832118 /* Debug */ = {
+		05EC103C2823DCF400982154 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NPX5YQ2XE8;
-				INFOPLIST_FILE = FolderColorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hbc-project.FolderColorUITests";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.huangbaocheng.FolderColor.FolderColorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = FolderColor;
 			};
 			name = Debug;
 		};
-		2FEF559A228DCC3800832118 /* Release */ = {
+		05EC103D2823DCF400982154 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = NPX5YQ2XE8;
-				INFOPLIST_FILE = FolderColorUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "hbc-project.FolderColorUITests";
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = me.huangbaocheng.FolderColor.FolderColorUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = FolderColor;
 			};
@@ -582,56 +720,62 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2FEF5562228DCC3700832118 /* Build configuration list for PBXProject "FolderColor" */ = {
+		05EC100B2823DCF300982154 /* Build configuration list for PBXProject "FolderColor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FEF5590228DCC3800832118 /* Debug */,
-				2FEF5591228DCC3800832118 /* Release */,
+				05EC10332823DCF400982154 /* Debug */,
+				05EC10342823DCF400982154 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FEF5592228DCC3800832118 /* Build configuration list for PBXNativeTarget "FolderColor" */ = {
+		05EC10352823DCF400982154 /* Build configuration list for PBXNativeTarget "FolderColor" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FEF5593228DCC3800832118 /* Debug */,
-				2FEF5594228DCC3800832118 /* Release */,
+				05EC10362823DCF400982154 /* Debug */,
+				05EC10372823DCF400982154 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FEF5595228DCC3800832118 /* Build configuration list for PBXNativeTarget "FolderColorTests" */ = {
+		05EC10382823DCF400982154 /* Build configuration list for PBXNativeTarget "FolderColorTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FEF5596228DCC3800832118 /* Debug */,
-				2FEF5597228DCC3800832118 /* Release */,
+				05EC10392823DCF400982154 /* Debug */,
+				05EC103A2823DCF400982154 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2FEF5598228DCC3800832118 /* Build configuration list for PBXNativeTarget "FolderColorUITests" */ = {
+		05EC103B2823DCF400982154 /* Build configuration list for PBXNativeTarget "FolderColorUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				2FEF5599228DCC3800832118 /* Debug */,
-				2FEF559A228DCC3800832118 /* Release */,
+				05EC103C2823DCF400982154 /* Debug */,
+				05EC103D2823DCF400982154 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
-/* Begin XCVersionGroup section */
-		2FEF5570228DCC3700832118 /* Document.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				2FEF5571228DCC3700832118 /* Document.xcdatamodel */,
-			);
-			currentVersion = 2FEF5571228DCC3700832118 /* Document.xcdatamodel */;
-			path = Document.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
+/* Begin XCRemoteSwiftPackageReference section */
+		0512F44F2827CA710045D7B7 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Dimillian/SwiftUIFlux";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
 		};
-/* End XCVersionGroup section */
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0512F4502827CA710045D7B7 /* SwiftUIFlux */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0512F44F2827CA710045D7B7 /* XCRemoteSwiftPackageReference "SwiftUIFlux" */;
+			productName = SwiftUIFlux;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
-	rootObject = 2FEF555F228DCC3700832118 /* Project object */;
+	rootObject = 05EC10082823DCF300982154 /* Project object */;
 }

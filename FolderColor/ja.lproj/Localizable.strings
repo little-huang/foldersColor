@@ -1,0 +1,10 @@
+/*
+	Localizable.strings
+	FolderColor
+
+	Created by 黄宝成 on 2022/5/10.
+	
+*/
+
+content = "フォルダーをここにドラッグしてフォルダーアイコンを変更します";
+revertContent = "フォルダーをここにドラッグしてフォルダーアイコンを元に戻します";
