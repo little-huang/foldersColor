@@ -261,22 +261,36 @@ struct ColorsListView: ConnectedView {
 			}
 	}
 
-	func handleDrop(providers: [NSItemProvider], props: ColorsListView.Props) -> Bool {
+	func handleDrop(providers: [NSItemProvider], props: ColorsListView.Props) {
+		let dispatchGroup = DispatchGroup()
+		var handled = false
+
 		for provider in providers {
-			if provider.hasItemConformingToTypeIdentifier("public.file-url") {
-				provider.loadItem(forTypeIdentifier: "public.file-url", options: nil) { (urlData, error) in
-					DispatchQueue.main.async {
-						if let data = urlData as? Data,
-						   let url = URL(dataRepresentation: data, relativeTo: nil),
-						   url.hasDirectoryPath {
-							describeDroppedURL(url, props: props)
-						}
+			let isURL = provider.hasItemConformingToTypeIdentifier("public.url")
+			if !isURL {
+				print("not url")
+				continue
+			}
+
+			handled = true
+			dispatchGroup.enter()
+			provider.loadItem(forTypeIdentifier: "public.file-url", options: nil) { (urlData, error) in
+				DispatchQueue.main.async {
+					if let data = urlData as? Data,
+					   let url = URL(dataRepresentation: data, relativeTo: nil),
+					   url.hasDirectoryPath {
+						describeDroppedURL(url, props: props)
+						// 通知 Finder 文件系统已更改
+						NSWorkspace.shared.noteFileSystemChanged(url.path)
 					}
+					dispatchGroup.leave()
 				}
-				return true
 			}
 		}
-		return false
+
+		dispatchGroup.notify(queue: DispatchQueue.main) {
+			print("dispatchGroup notify")
+		}
 	}
 
 	func initFcColor(props: Props) {
@@ -359,6 +373,7 @@ struct ColorsListView: ConnectedView {
 		.frame(width: 400, height: 500)
 		.onDrop(of: [.fileURL], isTargeted: nil) { providers in
 			handleDrop(providers: providers, props: props)
+			return true
 		} // onDrop end
 		.onAppear() {
 			initFcColor(props: props)
